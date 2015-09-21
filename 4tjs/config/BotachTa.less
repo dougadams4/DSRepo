@@ -1,0 +1,512 @@
+﻿/*************************************************************/
+/*          4-Tell STYLES							         */
+/*************************************************************/
+@grey: #E7E7E7;
+
+.FourTellContainer {
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    &:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+}
+
+#SideCategoryTopSellers, #SideProductRelated {
+    display: none;
+}
+
+.toutWrapper4T {
+    border: 1px solid @grey;
+    background: none;
+}
+
+.product4TCaption {
+    padding: 0;
+    text-align: left;
+    font-weight: bold;
+}
+
+.expandOnHover(@height) {
+    height: @height;
+
+    &:hover {
+        min-height: @height;
+        height: auto;
+    }
+}
+
+.product4T {
+    width: 160px;
+    padding: 5px;
+    margin: 0 auto;
+    background: transparent;
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+
+    & + & {
+        border-top: 1px solid@grey;
+    }
+
+    .productImage {
+        padding: 10px 0;
+        width: 100%;
+        height: auto;
+
+        .productImageImg {
+            max-width: 100%;
+            max-height: 100%;
+            border: none;
+            vertical-align: middle;
+            display: inline;
+        }
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+            border: none;
+            vertical-align: middle;
+            display: inline;
+            padding: 2px;
+        }
+    }
+
+    a.home {
+        text-decoration: none;
+
+        .productTitle {
+            text-align: left;
+            color: #00f;
+            height: auto;
+        }
+    }
+
+
+    .productPrice {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #f33;
+        float: left;
+        text-align: left;
+        height: 1.2em;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 4px 4px 4px 0;
+    }
+
+    .strikePrice {
+        text-decoration: line-through;
+        color: #B9B9B9;
+    }
+
+    .productSalePrice {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #f33;
+        float: left;
+        text-align: left;
+        height: 1.2em;
+        font-size: 11px;
+    }
+
+    .productBuy {
+        clear: both;
+        cursor: pointer;
+        text-decoration: none;
+        margin: 0 auto;
+        width: 130px;
+        height: 20px;
+        text-align: center;
+        padding-top: 4px;
+        font-size: 12px;
+        background-color: #006633;
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+}
+/* For scrollables. */
+.scrollable {
+    float: left;
+    position: relative;
+    overflow: hidden;
+
+    .items {
+        /* this cannot be too large;
+         * must fit ev-ery-thing */
+        width: 20000em;
+        position: absolute;
+        clear: both;
+
+        .scrollGroup, .product4T {
+            float: left;
+        }
+    }
+}
+/* For the buttons. */
+a.browse {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAwCAMAAAD5JNAAAAAAqFBMVEX///+wsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLG4mILSAAAAN3RSTlMAAQIDCAkLEhMaIiorLTg9QENHTlZcX2JkZn2Bg4uhpaetuL/Fx87Y3N7h6Onq7PL0+fr7/P3+pwOaKAAAAMhJREFUeF7d0EeywkAMRdE2tsGRnKOJDmTa9Nv/zj71B2ppwAa4szORqp6iGr21YjXHp4uVGy9z1ES/vQGs/UEBa7e1Ohuy4/WzG0COZgeAeQIID6uncNDJHsb6UzLPDfm/6VELq3R3F1bh4qrxVrZgtH9pxetuSwva4xda9xrC5bYrrF/7UcD8hr4uQusawH2XCkMfp8Iw+TzhhnlknYAZeFZDYWAifJhFzLes7zlkc161XHa/GPj8/6b9ITlfxq6iLqdx89sef8r8Ldm5n+0eAAAAAElFTkSuQmCC') /*../images/hori_large.png*/ no-repeat;
+    display: block;
+    width: 15px;
+    height: 18px;
+    float: left;
+    margin: 100px 0 0;
+    cursor: pointer;
+    font-size: 1px;
+}
+
+a.right {
+    background-position: 0 -30px;
+    clear: right;
+    margin-right: 10px;
+}
+
+a.left {
+    background-position: 0 0;
+    margin-left: 10px;
+}
+
+a.disabled {
+    visibility: hidden !important;
+}
+/* Here follows custom classes, so as to permit each page to have its own
+* custom CSS. */
+/* Tout1 on PD page. */
+.product4TCaptionPD1 {
+}
+
+.PD14T {
+    border-bottom: 1px solid #e6e6e6;
+    background: #fff url("//www.botach.com/templates/Magnificent/images/blue/bg_sideblock.gif") no-repeat 0 0;
+    width: 100%;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+}
+
+.product4TPD1 {
+    width: 160px;
+    margin: 0 auto;
+    background: transparent;
+
+    & + & {
+        border-top: 1px dotted @grey;
+        border-left: none;
+    }
+
+    .productImage {
+        .productImageImg {
+        }
+    }
+
+    a.home {
+        text-decoration: none;
+
+        .productTitle {
+            text-align: left;
+            color: #00f;
+            height: auto;
+            min-height: 0 !important;
+        }
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+        clear: both;
+    }
+}
+/* Tout2 on PD page */
+.product4TCaptionPD2 {
+}
+
+.product4TPD2 {
+
+    .productImage {
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+
+/* Tout3 on PD page */
+.product4TCaptionPD3 {
+}
+
+.product4TPD3 {
+    width: 30%;
+    border: 1px solid @grey;
+    border-radius: 8px;
+    margin: 4px;
+    padding: 4px;
+    float: left;
+
+    .productImage {
+        height: 130px;
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+        height: 3.8em !important;
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+
+/* Tout on the home page. */
+.product4TCaptionHome {
+}
+
+.product4THome {
+    .productImage {
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* Category pages */
+.product4TCaptionCat {
+}
+
+.product4TCat {
+
+    .productImage {
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* Search */
+.product4TCaptionSearch {
+}
+
+.product4TSearch {
+    .productImage {
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* View Cart */
+.product4TCaptionVC {
+}
+
+.product4TVC {
+    .productImage {
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* Checkout */
+.product4TCaptionCheck {
+}
+
+.product4TCheck {
+
+    .productImage {
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* Quick Cart */
+.product4TCaptionQC {
+}
+
+.QC4T {
+    padding-left: 3px;
+}
+
+.product4TQC {
+    width: 23%;
+    float: left;
+    margin: 0;
+
+    & + & {
+        border-top: none;
+        border-left: 1px dotted @grey;
+    }
+
+    .productImage {
+        height: 130px;
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+        height: 2.4em !important;
+        overflow: hidden;
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+        padding: 4px 4px 4px 0;
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* Quick view */
+.product4TCaptionQV {
+}
+
+.product4TQV {
+
+    .productImage {
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+
