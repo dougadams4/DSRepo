@@ -1,0 +1,506 @@
+﻿/*************************************************************/
+/*          4-Tell STYLES							         */
+/*************************************************************/
+@grey: #DDD;
+
+.FourTellContainer {
+    display: block;
+    margin: 0;
+    padding: 0;
+    .clearfix
+}
+
+.clearfix() {
+    &:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+}
+
+.expandOnHover(@height) {
+    height: @height;
+    min-height: @height;
+
+    &:hover {
+        height: auto;
+    }
+}
+
+.toutWrapper4T {
+    border: 1px solid @grey;
+    background: none;
+}
+
+.product4TCaption {
+    padding: 0;
+    margin: 5px 0 0 5px;
+    text-align: left;
+    font-size: 24px;
+    color: #374429;
+    font-family: impact, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.product4T {
+    background-color: transparent;
+    padding: 5px;
+    margin: 0;
+    width: 120px;
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+
+    & + & {
+        border-left: 1px dotted @grey;
+    }
+
+    .productImage {
+        padding: 10px 0;
+        width: 100%;
+        height: 100px;
+
+        .productImageImg {
+            max-width: 100%;
+            max-height: 100%;
+            border: none;
+            vertical-align: middle;
+            display: inline;
+        }
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+            border: none;
+            vertical-align: middle;
+            display: inline;
+            padding: 2px;
+        }
+    }
+
+
+
+    .productTitle {
+        width: 100%;
+        overflow: hidden;
+        font-size: 14px;
+        font-weight: bold;
+        .expandOnHover(3.4em);
+        color: #4D4D4D;
+    }
+
+    .productPrice {
+        font-family: Arial, Helvetica, sans-serif;
+        height: 1.2em;
+        font-size: 13px;
+        font-weight: normal;
+        padding: 5px;
+    }
+
+    .strikePrice {
+        text-decoration: line-through;
+        color: @grey;
+    }
+
+    .productSalePrice {
+        font-family: Arial, Helvetica, sans-serif;
+        color: red;
+        height: 1.2em;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .productBuy {
+        margin: 0 0 10px;
+        text-decoration: none;
+
+        img, input {
+            cursor: pointer;
+            max-width: 100%;
+            border: medium none;
+        }
+    }
+}
+/* For scrollables. */
+.scrollable {
+    float: left;
+    position: relative;
+    overflow: hidden;
+
+    .items {
+        /* this cannot be too large;
+         * must fit ev-ery-thing */
+        width: 20000em;
+        position: absolute;
+        clear: both;
+
+        .scrollGroup, .product4T {
+            float: left;
+        }
+    }
+}
+/* For the buttons. */
+a.browse {
+    background: url(../images/hori_large.png) no-repeat;
+    display: block;
+    width: 15px;
+    height: 18px;
+    float: left;
+    margin: 100px 0 0;
+    cursor: pointer;
+    font-size: 1px;
+}
+
+a.right {
+    background-position: 0 -30px;
+    clear: right;
+    margin-right: 10px;
+}
+
+a.left {
+    background-position: 0 0;
+    margin-left: 10px;
+}
+
+a.disabled {
+    visibility: hidden !important;
+}
+/* Here follows custom classes, so as to permit each page to have its own
+* custom CSS. */
+/* Tout1 on PD page. */
+.product4TCaptionPD1 {
+}
+
+.product4TPD1 {
+    width: 250px;
+
+    .productImage {
+        width: 50%;
+        float: left;
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+        height: 8.5em;
+        width: 50%;
+        float: right;
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+        clear: both;
+    }
+
+    .productBuy {
+    }
+}
+/* Tout2 on PD page
+    Except on this site, it's 2nd home page. Just roll with it.
+*/
+.product4TCaptionPD2 {
+    margin: 0;
+    text-align: center;
+    color: #111111;
+    font-family: "LocustResistance", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 35px;
+    background: url(//www.airrattle.com/v/vspfiles/templates/airrattle/images/homepage/best-sellers-bg.png);
+}
+
+.HOM24T {
+    .product4TCaption {
+        display: block;
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        color: #111111;
+        width: 100%;
+        background: #dddddd;
+        height: 32px;
+        line-height: 32px;
+        text-indent: 20px;
+        margin: 0;
+        margin-bottom: 4px;
+        border-top: 1px solid #ffffff;
+    }
+}
+
+.product4TPD2 {
+    padding: 0;
+    margin: 4px auto;
+    width: 300px;
+    height: 90px;
+    border-bottom: 1px dotted @grey;
+
+    & + & {
+        border-left: none;
+    }
+
+    .productImage {
+        padding: 0;
+        float: left;
+        height: 70px;
+        width: 100px;
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+        padding: 2px 4px;
+        width: 190px;
+        float: right;
+        font-size: 12px;
+        height: 4.2em;
+
+        &:hover {
+            height: 4.2em;
+        }
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+        width: 200px;
+        float: right;
+    }
+
+    .productPrice {
+        padding: 0;
+        width: 200px;
+        float: right;
+    }
+
+    .productBuy {
+    }
+}
+/* Tout on the home page. */
+.product4TCaptionHome {
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0 30px;
+    line-height: 38px;
+    text-transform: uppercase;
+    color: white;
+    font-family: "LocustResistance", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    background: url(//www.airrattle.com/v/vspfiles/templates/airrattle/images/homepage/green-pattern.png);
+}
+
+.product4THome {
+    width: 180px;
+
+    .productImage {
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+        .expandOnHover(4em)
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* Category pages */
+.product4TCaptionCat {
+}
+
+.product4TCat {
+
+    .productImage {
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* Search */
+.product4TCaptionSearch {
+}
+
+.product4TSearch {
+    .productImage {
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* View Cart */
+.product4TCaptionVC {
+}
+
+.product4TVC {
+    width: 210px;
+
+    .productImage {
+        height: 100px;
+        width: 50%;
+        float: left;
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+        height: 8.5em;
+        width: 50%;
+        float: right;
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+        clear: both;
+    }
+
+    .productBuy {
+    }
+}
+/* Checkout */
+.product4TCaptionCheck {
+}
+
+.product4TCheck {
+
+    .productImage {
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* Quick Cart */
+.product4TCaptionQC {
+}
+
+.product4TQC {
+
+    .productImage {
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* Quick view */
+.product4TCaptionQV {
+}
+
+.product4TQV {
+
+    .productImage {
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+
