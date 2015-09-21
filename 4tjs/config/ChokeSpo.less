@@ -1,0 +1,551 @@
+﻿/*************************************************************/
+/*          4-Tell STYLES							         */
+/*************************************************************/
+@grey: #DDD;
+
+.FourTellContainer {
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    &:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+}
+
+.toutWrapper4T {
+    border: 1px solid @grey;
+    background: none;
+}
+
+.product4TCaption {
+    color: #941A1D;
+    font-size: 18px;
+    background: url("//www.chokesports.com/template/images/square.png");
+    line-height: 42px;
+    text-transform: uppercase;
+    padding: 0;
+    padding-left: 5px;
+    margin: 0;
+    text-align: left;
+    font-weight: bold;
+}
+
+.product4T {
+    background-color: white;
+    padding: 5px;
+    margin: 0;
+    width: 160px;
+    border: none;
+    text-align: center;
+    float: left;
+    vertical-align: middle;
+
+    & + & {
+        border-left: 1px dotted @grey;
+    }
+
+    .productImage {
+        padding: 10px 0;
+        width: 100%;
+        height: 120px;
+
+        .productImageImg {
+            max-width: 100%;
+            max-height: 100%;
+            border: none;
+            vertical-align: middle;
+            display: inline;
+        }
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+            border: none;
+            vertical-align: middle;
+            display: inline;
+            padding: 2px;
+        }
+    }
+
+    .expandOnHover(@height) {
+        height: @height;
+        min-height: @height;
+
+        &:hover {
+            height: auto;
+        }
+    }
+
+    a.home {
+        color: #333;
+
+        &:hover {
+            color: #FF5C46;
+        }
+
+        .productTitle {
+            width: 100%;
+            overflow: hidden;
+            font-weight: bold;
+            .expandOnHover(3em)
+        }
+    }
+
+    .productPrice {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        font-weight: normal;
+        color: #719334;
+        display: inline;
+        padding: 2px;
+    }
+
+    .strikePrice {
+        text-decoration: line-through;
+    }
+
+    .productSalePrice {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #FF5C46;
+        font-size: 18px;
+        font-weight: normal;
+        display: inline;
+        padding: 2px;
+    }
+
+    .productBuy {
+        margin: 0 0 10px;
+        text-decoration: none;
+
+        input {
+            max-width: 100%;
+            margin-top: 10px;
+            padding-left: 25px;
+            font-size: 13px;
+            background: #201E58 url("//www.chokesports.com/template/images/white/opt.png") 8px 50% no-repeat;
+
+            &:hover {
+                background-color: #941A1D;
+            }
+        }
+    }
+}
+/* For scrollables. */
+.scrollable {
+    float: left;
+    position: relative;
+    overflow: hidden;
+
+    .items {
+        /* this cannot be too large;
+         * must fit ev-ery-thing */
+        width: 20000em;
+        position: absolute;
+        clear: both;
+
+        .scrollGroup, .product4T {
+            float: left;
+        }
+    }
+}
+/* For the buttons. */
+a.browse {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAwCAMAAAD5JNAAAAAAqFBMVEX///+wsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLG4mILSAAAAN3RSTlMAAQIDCAkLEhMaIiorLTg9QENHTlZcX2JkZn2Bg4uhpaetuL/Fx87Y3N7h6Onq7PL0+fr7/P3+pwOaKAAAAMhJREFUeF7d0EeywkAMRdE2tsGRnKOJDmTa9Nv/zj71B2ppwAa4szORqp6iGr21YjXHp4uVGy9z1ES/vQGs/UEBa7e1Ohuy4/WzG0COZgeAeQIID6uncNDJHsb6UzLPDfm/6VELq3R3F1bh4qrxVrZgtH9pxetuSwva4xda9xrC5bYrrF/7UcD8hr4uQusawH2XCkMfp8Iw+TzhhnlknYAZeFZDYWAifJhFzLes7zlkc161XHa/GPj8/6b9ITlfxq6iLqdx89sef8r8Ldm5n+0eAAAAAElFTkSuQmCC') /*../images/hori_large.png*/ no-repeat;
+    display: block;
+    width: 15px;
+    height: 18px;
+    float: left;
+    margin: 100px 0 0;
+    cursor: pointer;
+    font-size: 1px;
+}
+
+a.right {
+    background-position: 0 -30px;
+    clear: right;
+    margin-right: 10px;
+}
+
+a.left {
+    background-position: 0 0;
+    margin-left: 10px;
+}
+
+a.disabled {
+    visibility: hidden !important;
+}
+/* Here follows custom classes, so as to permit each page to have its own
+* custom CSS. */
+/* Tout1 on PD page. */
+.product4TCaptionPD1 {
+}
+
+.PD14T {
+    display: block;
+    margin-top: 10px;
+}
+
+.product4TPD1 {
+    .productImage {
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* Tout2 on PD page */
+.product4TCaptionPD2 {
+}
+
+.product4TPD2 {
+    width: 200px;
+    padding: 5px 20px;
+
+    .productImage {
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+        float: right;
+        padding: 0;
+    }
+
+    .productPrice {
+        padding: 0;
+        color: #585A5D;
+    }
+
+    .strikePrice {
+        text-decoration: line-through;
+        float: right;
+        margin-left: 7px;
+        width: 45%;
+        clear: right;
+        text-align: left;
+    }
+
+    .productBuy {
+    }
+}
+
+@media (max-width:800px) {
+    .product4TPD2 {
+        width: 190px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .product4TPD2 {
+        width: 220px;
+    }
+}
+/* Tout on the home page. */
+.product4TCaptionHome {
+}
+
+.HOME4T a.browse {
+    margin-top: 200px;
+}
+
+.product4THome {
+    background-color: #F2F2F2;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border: 1px solid;
+    border-bottom: 2px solid;
+    border-color: #e5e5e5 #e5e5e5 #ddd;
+    -moz-border-image: none;
+    -o-border-image: none;
+    -webkit-border-image: none;
+    border-image: none;
+    height: 275px;
+    min-height: 398px;
+    width: 210px;
+    min-width: 231px;
+    margin: 16px 13px 10px 0;
+    padding: 0;
+
+    .productImage {
+        background: none repeat scroll 0 0 #fff;
+        height: 200px;
+        padding-top: 39px;
+        border-bottom: none;
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+        margin-top: 17px;
+        min-height: 0;
+        height: 28px;
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+        float: right;
+        padding: 0;
+    }
+
+    .productPrice {
+        padding: 0;
+        color: #585A5D;
+    }
+
+    .strikePrice {
+        text-decoration: line-through;
+        float: right;
+        margin-left: 7px;
+        margin-right: 15%;
+        width: 35%;
+        clear: right;
+    }
+
+    .productBuy {
+        input {
+            &:hover {
+                background-color: #FF5C46;
+            }
+
+            background: url("/template/images/white/opt.png") no-repeat scroll 8px 50% #2c5987;
+            font-size: 13px;
+            margin-top: 14px;
+            max-width: 100%;
+            padding-left: 25px;
+        }
+    }
+}
+/* Category pages */
+.product4TCaptionCat {
+}
+
+.product4TCat {
+    .productImage {
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* Search */
+.product4TCaptionSearch {
+}
+
+.product4TSearch {
+    .productImage {
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* View Cart */
+.product4TCaptionVC {
+}
+
+.VC4T {
+    margin: 0 auto;
+    max-width: 924px;
+}
+
+.ProceedToCheckout {
+    float: left;
+}
+
+.KeepShopping {
+    float: right;
+}
+
+.ProceedToCheckout, .KeepShopping {
+    padding: 2px 10px;
+}
+
+.product4TVC {
+    width: 200px;
+    padding: 5px 15px;
+
+    .productImage {
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+
+@media (max-width:800px) {
+    .product4TVC {
+        width: 210px;
+        padding: 5px 20px;
+    }
+}
+
+/* Checkout */
+.product4TCaptionCheck {
+}
+
+.product4TCheck {
+    .productImage {
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* Quick Cart */
+.product4TCaptionQC {
+}
+
+.product4TQC {
+    .productImage {
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* Quick view */
+.product4TCaptionQV {
+}
+
+.product4TQV {
+    .productImage {
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+
