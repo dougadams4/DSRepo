@@ -1,0 +1,163 @@
+/*************************************************************/
+/*          4-Tell STYLES							         */
+/*************************************************************/
+.FourTellContainer {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+}
+.FourTellContainer:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.toutWrapper4T {
+  border: 1px solid #dddddd;
+  background: none;
+}
+.product4TCaption {
+  font-family: "Orbitron", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  padding: 0;
+  text-align: left;
+  font-weight: bold;
+}
+.product4T {
+  background-color: transparent;
+  padding: 5px;
+  margin: 0;
+  width: 120px;
+  border: none;
+  text-align: center;
+  vertical-align: middle;
+}
+.product4T + .product4T {
+  border-left: 1px dotted #dddddd;
+}
+.product4T .productImage {
+  padding: 10px 0;
+  width: 100%;
+  height: 130px;
+}
+.product4T .productImage .productImageImg {
+  max-width: 100%;
+  max-height: 100%;
+  border: none;
+  vertical-align: middle;
+  display: inline;
+}
+.product4T .ratingImage .ratingImageImg {
+  border: none;
+  vertical-align: middle;
+  display: inline;
+  padding: 2px;
+}
+.product4T a.home {
+  text-decoration: none;
+}
+.product4T .productTitle {
+  width: 100%;
+  overflow: hidden;
+  font-weight: bold;
+  height: 3.4em;
+}
+.product4T .productTitle:hover {
+  min-height: 3.4em;
+  height: auto;
+}
+.product4T .productPrice {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 15px;
+  font-size: 13px;
+  font-weight: normal;
+}
+.product4T .productSalePrice {
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
+  height: 15px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.product4T .productBuy {
+  margin: 0 0 10px;
+  text-decoration: none;
+}
+.product4T .productBuy img,
+.product4T .productBuy input {
+  max-width: 100%;
+  border: medium none;
+}
+/* For scrollables. */
+.scrollable {
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+.scrollable .items {
+  /* this cannot be too large;
+         * must fit ev-ery-thing */
+  width: 20000em;
+  position: absolute;
+  clear: both;
+}
+.scrollable .items .scrollGroup,
+.scrollable .items .product4T {
+  float: left;
+}
+/* For the buttons. */
+a.browse {
+  background: url(../images/hori_large.png) no-repeat;
+  display: block;
+  width: 15px;
+  height: 18px;
+  float: left;
+  margin: 100px 0px;
+  cursor: pointer;
+  font-size: 1px;
+}
+a.right {
+  background-position: 0 -30px;
+  clear: right;
+  margin-right: 0px;
+}
+a.left {
+  background-position: 0 0;
+  margin-left: 10px;
+}
+a.disabled {
+  visibility: hidden !important;
+}
+/* Here follows custom classes, so as to permit each page to have its own
+* custom CSS. */
+/* Tout1 on PD page. */
+.PD14T {
+  float: left;
+  width: 400px;
+}
+.product4TPD1 {
+  width: 140px;
+  padding: 5px 10px;
+}
+/* Tout2 on PD page */
+.product4TPD2 {
+  width: 190px;
+}
+/* Tout on the home page. */
+/* Category pages */
+/* Search */
+/* View Cart */
+.VC4T {
+  float: left;
+}
+.KeepShopping {
+  clear: right;
+}
+.product4TVC {
+  width: 170px;
+}
+/* Checkout */
+/* Quick Cart */
+/* Quick view */
+
